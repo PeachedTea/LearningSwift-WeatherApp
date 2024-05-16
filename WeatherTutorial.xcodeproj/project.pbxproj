@@ -11,6 +11,7 @@
 		FEB183782BF5BF9F00A5CEB4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB183772BF5BF9F00A5CEB4 /* ContentView.swift */; };
 		FEB1837A2BF5BFA200A5CEB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEB183792BF5BFA200A5CEB4 /* Assets.xcassets */; };
 		FEB1837D2BF5BFA200A5CEB4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEB1837C2BF5BFA200A5CEB4 /* Preview Assets.xcassets */; };
+		FEB183852BF5C53F00A5CEB4 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB183842BF5C53F00A5CEB4 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		FEB183772BF5BF9F00A5CEB4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FEB183792BF5BFA200A5CEB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEB1837C2BF5BFA200A5CEB4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FEB183842BF5C53F00A5CEB4 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		FEB183742BF5BF9E00A5CEB4 /* WeatherTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				FEB183832BF5C52900A5CEB4 /* Managers */,
 				FEB183752BF5BF9F00A5CEB4 /* WeatherTutorialApp.swift */,
 				FEB183772BF5BF9F00A5CEB4 /* ContentView.swift */,
 				FEB183792BF5BFA200A5CEB4 /* Assets.xcassets */,
@@ -65,6 +68,14 @@
 				FEB1837C2BF5BFA200A5CEB4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FEB183832BF5C52900A5CEB4 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				FEB183842BF5C53F00A5CEB4 /* LocationManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			files = (
 				FEB183782BF5BF9F00A5CEB4 /* ContentView.swift in Sources */,
 				FEB183762BF5BF9F00A5CEB4 /* WeatherTutorialApp.swift in Sources */,
+				FEB183852BF5C53F00A5CEB4 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

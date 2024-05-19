@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FEACACD02BFA0DB200039D75 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACACCF2BFA0DB200039D75 /* LoadingView.swift */; };
 		FEB183762BF5BF9F00A5CEB4 /* WeatherTutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB183752BF5BF9F00A5CEB4 /* WeatherTutorialApp.swift */; };
 		FEB183782BF5BF9F00A5CEB4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB183772BF5BF9F00A5CEB4 /* ContentView.swift */; };
 		FEB1837A2BF5BFA200A5CEB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEB183792BF5BFA200A5CEB4 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FEACACCF2BFA0DB200039D75 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		FEB183722BF5BF9E00A5CEB4 /* WeatherTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEB183752BF5BF9F00A5CEB4 /* WeatherTutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTutorialApp.swift; sourceTree = "<group>"; };
 		FEB183772BF5BF9F00A5CEB4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			children = (
 				FEB183772BF5BF9F00A5CEB4 /* ContentView.swift */,
 				FEC5ED6B2BF90626002FAE8F /* WelcomeView.swift */,
+				FEACACCF2BFA0DB200039D75 /* LoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				FEB183782BF5BF9F00A5CEB4 /* ContentView.swift in Sources */,
 				FEB183762BF5BF9F00A5CEB4 /* WeatherTutorialApp.swift in Sources */,
 				FEB183852BF5C53F00A5CEB4 /* LocationManager.swift in Sources */,
+				FEACACD02BFA0DB200039D75 /* LoadingView.swift in Sources */,
 				FEC5ED6C2BF90626002FAE8F /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

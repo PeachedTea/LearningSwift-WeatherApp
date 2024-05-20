@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE2E33342BFC14D200AF9D39 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2E33332BFC14D200AF9D39 /* WeatherView.swift */; };
+		FE2E33362BFC150B00AF9D39 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2E33352BFC150B00AF9D39 /* ModelData.swift */; };
+		FE2E33382BFC16BD00AF9D39 /* weatherData.json in Resources */ = {isa = PBXBuildFile; fileRef = FE2E33372BFC16BD00AF9D39 /* weatherData.json */; };
 		FEACACD02BFA0DB200039D75 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACACCF2BFA0DB200039D75 /* LoadingView.swift */; };
 		FEACACD22BFA897800039D75 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACACD12BFA897800039D75 /* WeatherManager.swift */; };
 		FEB183762BF5BF9F00A5CEB4 /* WeatherTutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB183752BF5BF9F00A5CEB4 /* WeatherTutorialApp.swift */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE2E33332BFC14D200AF9D39 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		FE2E33352BFC150B00AF9D39 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		FE2E33372BFC16BD00AF9D39 /* weatherData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = weatherData.json; sourceTree = "<group>"; };
 		FEACACCF2BFA0DB200039D75 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		FEACACD12BFA897800039D75 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		FEB183722BF5BF9E00A5CEB4 /* WeatherTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				FEB1837C2BF5BFA200A5CEB4 /* Preview Assets.xcassets */,
+				FE2E33352BFC150B00AF9D39 /* ModelData.swift */,
+				FE2E33372BFC16BD00AF9D39 /* weatherData.json */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -91,6 +99,7 @@
 				FEB183772BF5BF9F00A5CEB4 /* ContentView.swift */,
 				FEC5ED6B2BF90626002FAE8F /* WelcomeView.swift */,
 				FEACACCF2BFA0DB200039D75 /* LoadingView.swift */,
+				FE2E33332BFC14D200AF9D39 /* WeatherView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -154,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEB1837D2BF5BFA200A5CEB4 /* Preview Assets.xcassets in Resources */,
+				FE2E33382BFC16BD00AF9D39 /* weatherData.json in Resources */,
 				FEB1837A2BF5BFA200A5CEB4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,6 +180,8 @@
 				FEB183762BF5BF9F00A5CEB4 /* WeatherTutorialApp.swift in Sources */,
 				FEB183852BF5C53F00A5CEB4 /* LocationManager.swift in Sources */,
 				FEACACD02BFA0DB200039D75 /* LoadingView.swift in Sources */,
+				FE2E33362BFC150B00AF9D39 /* ModelData.swift in Sources */,
+				FE2E33342BFC14D200AF9D39 /* WeatherView.swift in Sources */,
 				FEC5ED6C2BF90626002FAE8F /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +316,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WeatherTutorial/Preview Content\"";
+				DEVELOPMENT_TEAM = MZNDWHFGHB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -332,6 +345,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WeatherTutorial/Preview Content\"";
+				DEVELOPMENT_TEAM = MZNDWHFGHB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

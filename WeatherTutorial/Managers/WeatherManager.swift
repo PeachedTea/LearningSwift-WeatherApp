@@ -16,7 +16,7 @@ import CoreLocation
  into and returns a ResponseBody structure which stores the data
  */
 class WeatherManager {
-    func getCurrentWeather(latitude: CLLocation, longitude: CLLocation) async throws -> ResponseBody {
+    func getCurrentWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) async throws -> ResponseBody {
         
         // url for the API call
         guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=2d48206ea5bde563a613a90b474b8dc7&unitsmetric") else {fatalError("Missing URL")}

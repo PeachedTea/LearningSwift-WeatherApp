@@ -11,7 +11,52 @@ struct WeatherView: View {
     var weather: ResponseBody
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack(alignment: .leading) {
+            VStack {
+                VStack(alignment: .leading, spacing: 5) {
+                    // display city name
+                    Text(weather.name)
+                        .bold()
+                        .font(.title)
+                    
+                    Text("Today, \(Date().formatted(.dateTime.month().day().hour().minute()))")
+                        .fontWeight(.light)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    Spacer()
+                    
+                    VStack {
+                        HStack {
+                            VStack(spacing: 20) {
+                                Image(systemName: "sun.max")
+                                    .font(.system(size: 40))
+                                
+                                Text(weather.weather[0].main)
+                            }
+                            .frame(width: 150, alignment: .leading)
+                            
+                            Spacer()
+                            
+                            Text(weather.main.feelsLike.roundDouble() + "°")
+                                .font(.system(size: 100))
+                                .fontWeight(.bold)
+                                .padding()
+                            }
+                        
+                        Spacer()
+                            .frame(height: 80)
+                        
+                    }
+                    .frame(maxWidth: .infinity)
+                }
+                .padding()
+                .frame(maxWidth: .infinity, alignment: .leading)
+            
+        }
+        .edgesIgnoringSafeArea(.bottom)
+        .background(.black)
+        .preferredColorScheme(.dark)
     }
 }
 

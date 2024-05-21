@@ -1,3 +1,4 @@
 
 WeatherTutorial.xcodeproj/project.pbxproj
 *.pbxproj
+WeatherTutorial/Secrets/secrets.json

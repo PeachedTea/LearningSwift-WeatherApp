@@ -19,7 +19,9 @@ class WeatherManager {
     func getCurrentWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) async throws -> ResponseBody {
         
         // url for the API call
-        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=2d48206ea5bde563a613a90b474b8dc7&unitsmetric") else {fatalError("Missing URL")}
+        guard let APIKey = Secrets.parse(jsonFile: "secrets") else {
+            fatalError("Could not get API Key")}
+        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=\(APIKey.OpenWeatherAPIKey)&units=metric") else {fatalError("Missing URL")}
         
         // request the data from the url
         let urlRequest = URLRequest(url: url)
@@ -78,4 +80,21 @@ extension ResponseBody.MainResponse {
     var feelsLike: Double {return feels_like}
     var tempMin: Double {return temp_min}
     var tempMax: Double {return temp_max}
+}
+
+struct Secrets: Decodable {
+    let OpenWeatherAPIKey: String
+}
+
+extension Decodable {
+    static func parse(jsonFile: String) -> Secrets? {
+        
+        guard let url = Bundle.main.url(forResource: jsonFile, withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let APIKey = try? JSONDecoder().decode(Secrets.self, from: data)
+            else {
+            return nil
+        }
+        return APIKey
+    }
 }

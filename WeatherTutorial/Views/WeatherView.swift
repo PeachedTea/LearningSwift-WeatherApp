@@ -12,6 +12,12 @@ struct WeatherView: View {
     
     var body: some View {
         ZStack(alignment: .leading) {
+            // Add the gradient background
+            LinearGradient(gradient: Gradient(colors: [.black, .gray]),
+                           startPoint: .top,
+                           endPoint: .bottom)
+                .ignoresSafeArea()
+
             VStack {
                 VStack(alignment: .leading, spacing: 5) {
                     // display city name
@@ -38,11 +44,18 @@ struct WeatherView: View {
                             
                             Spacer()
                             
-                            Text(weather.main.feelsLike.roundDouble() + "°")
-                                .font(.system(size: 100))
-                                .fontWeight(.bold)
-                                .padding()
+                            VStack(alignment: .trailing) {
+                                Text(weather.main.temp.roundDouble() + "°")
+                                    .font(.system(size: 100))
+                                    .fontWeight(.bold)
+                                    .padding()
+                                
+                                Text("Feels like: \(weather.main.feelsLike.roundDouble())°")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.light)
+                                    .padding(.trailing)
                             }
+                        }
                         
                         Spacer()
                             .frame(height: 80)
@@ -54,8 +67,9 @@ struct WeatherView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
             
         }
+        
+        
         .edgesIgnoringSafeArea(.bottom)
-        .background(.black)
         .preferredColorScheme(.dark)
     }
 }
@@ -63,3 +77,5 @@ struct WeatherView: View {
 #Preview {
     WeatherView(weather: previewWeather)
 }
+
+

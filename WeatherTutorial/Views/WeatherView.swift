@@ -12,8 +12,8 @@ struct WeatherView: View {
     
     var body: some View {
         ZStack(alignment: .leading) {
-            // Add the gradient background
-            LinearGradient(gradient: Gradient(colors: [.black, .gray]),
+            // Add a gradient to the background
+            LinearGradient(gradient: getGradient(),
                            startPoint: .top,
                            endPoint: .bottom)
                 .ignoresSafeArea()
@@ -24,7 +24,7 @@ struct WeatherView: View {
                     Text(weather.name)
                         .bold()
                         .font(.title)
-                    
+                    // display the date and time
                     Text("Today, \(Date().formatted(.dateTime.month().day().hour().minute()))")
                         .fontWeight(.light)
                 }
@@ -44,16 +44,20 @@ struct WeatherView: View {
                             
                             Spacer()
                             
+                            // Display the 'real' and 'feels like' temperature
+                            
                             VStack(alignment: .trailing) {
                                 Text(weather.main.temp.roundDouble() + "°")
                                     .font(.system(size: 100))
                                     .fontWeight(.bold)
-                                    .padding()
                                 
-                                Text("Feels like: \(weather.main.feelsLike.roundDouble())°")
-                                    .font(.system(size: 20))
-                                    .fontWeight(.light)
-                                    .padding(.trailing)
+                                HStack {
+                                    Text("Feels like: ")
+                                    Text("\(weather.main.feelsLike.roundDouble())°")
+                                        .fontWeight(.bold)
+                                }
+                                .font(.system(size: 20))
+                                .padding(.trailing)
                             }
                         }
                         
@@ -67,15 +71,27 @@ struct WeatherView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
             
         }
-        
-        
-        .edgesIgnoringSafeArea(.bottom)
+        .edgesIgnoringSafeArea(.all)
         .preferredColorScheme(.dark)
+    }
+    
+    private func getGradient() -> Gradient {
+        let currentHour = Calendar.current.component(.hour, from: Date())
+        // set a 'morning' gradient between 4 and 10
+        if currentHour >= 4 && currentHour < 10 {
+            return Gradient(colors: [.black, .orange])
+            
+        // set a 'evening' gradient between 18 and 24
+        } else if currentHour >= 18 && currentHour < 24 {
+            return Gradient(colors: [.black, .purple])
+            
+        // Default 'black and gray' gradient otherwise
+        } else {
+            return Gradient(colors: [.black, .gray])
+        }
     }
 }
 
 #Preview {
     WeatherView(weather: previewWeather)
 }
-
-

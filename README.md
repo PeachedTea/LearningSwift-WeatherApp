@@ -17,4 +17,6 @@ This is a weather app project I followed a [tutorial]((https://www.youtube.com/w
 
 ## Features/Customizations I Made 🔧
 * Hiding the API key using a JSON file then decoding it when making a API call
-* Application UI changes
+* Application UI design changes
+* Different background colors depending on the time of day
+* Laying out additional weather information returned from the API call

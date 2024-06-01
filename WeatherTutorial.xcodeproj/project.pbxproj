@@ -11,7 +11,6 @@
 		FE2E33362BFC150B00AF9D39 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2E33352BFC150B00AF9D39 /* ModelData.swift */; };
 		FE2E33382BFC16BD00AF9D39 /* weatherData.json in Resources */ = {isa = PBXBuildFile; fileRef = FE2E33372BFC16BD00AF9D39 /* weatherData.json */; };
 		FE2E333A2BFC19AF00AF9D39 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2E33392BFC19AF00AF9D39 /* Extensions.swift */; };
-		FE2E333C2BFC2E4300AF9D39 /* secrets.json in Resources */ = {isa = PBXBuildFile; fileRef = FE2E333B2BFC2E4300AF9D39 /* secrets.json */; };
 		FEACACD02BFA0DB200039D75 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACACCF2BFA0DB200039D75 /* LoadingView.swift */; };
 		FEACACD22BFA897800039D75 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACACD12BFA897800039D75 /* WeatherManager.swift */; };
 		FEB183762BF5BF9F00A5CEB4 /* WeatherTutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB183752BF5BF9F00A5CEB4 /* WeatherTutorialApp.swift */; };
@@ -20,6 +19,7 @@
 		FEB1837D2BF5BFA200A5CEB4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEB1837C2BF5BFA200A5CEB4 /* Preview Assets.xcassets */; };
 		FEB183852BF5C53F00A5CEB4 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB183842BF5C53F00A5CEB4 /* LocationManager.swift */; };
 		FEC5ED6C2BF90626002FAE8F /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC5ED6B2BF90626002FAE8F /* WelcomeView.swift */; };
+		FED584502BFEE62700F85B1C /* secrets.json in Resources */ = {isa = PBXBuildFile; fileRef = FED5844F2BFEE62700F85B1C /* secrets.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,6 @@
 		FE2E33352BFC150B00AF9D39 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		FE2E33372BFC16BD00AF9D39 /* weatherData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = weatherData.json; sourceTree = "<group>"; };
 		FE2E33392BFC19AF00AF9D39 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		FE2E333B2BFC2E4300AF9D39 /* secrets.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = secrets.json; sourceTree = "<group>"; };
 		FEACACCF2BFA0DB200039D75 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		FEACACD12BFA897800039D75 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		FEB183722BF5BF9E00A5CEB4 /* WeatherTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,6 +36,7 @@
 		FEB1837C2BF5BFA200A5CEB4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FEB183842BF5C53F00A5CEB4 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		FEC5ED6B2BF90626002FAE8F /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		FED5844F2BFEE62700F85B1C /* secrets.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = secrets.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +53,7 @@
 		FE2E333D2BFC2F5E00AF9D39 /* Secrets */ = {
 			isa = PBXGroup;
 			children = (
-				FE2E333B2BFC2E4300AF9D39 /* secrets.json */,
+				FED5844F2BFEE62700F85B1C /* secrets.json */,
 			);
 			path = Secrets;
 			sourceTree = "<group>";
@@ -177,8 +177,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEB1837D2BF5BFA200A5CEB4 /* Preview Assets.xcassets in Resources */,
-				FE2E333C2BFC2E4300AF9D39 /* secrets.json in Resources */,
 				FE2E33382BFC16BD00AF9D39 /* weatherData.json in Resources */,
+				FED584502BFEE62700F85B1C /* secrets.json in Resources */,
 				FEB1837A2BF5BFA200A5CEB4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

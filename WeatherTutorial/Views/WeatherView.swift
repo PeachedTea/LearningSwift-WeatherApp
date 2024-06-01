@@ -14,9 +14,9 @@ struct WeatherView: View {
         ZStack(alignment: .leading) {
             // Add a gradient to the background
             LinearGradient(gradient: getGradient(),
-                           startPoint: .top,
-                           endPoint: .bottom)
-                .ignoresSafeArea()
+                           startPoint: .topLeading,
+                           endPoint: .bottomTrailing)
+            .edgesIgnoringSafeArea(.all)
 
             VStack {
                 VStack(alignment: .leading, spacing: 5) {
@@ -35,9 +35,9 @@ struct WeatherView: View {
                     VStack {
                         HStack {
                             VStack(spacing: 20) {
-                                Image(systemName: "sun.max")
+                                // set the weatherIcon depending on conditions
+                                Image(systemName: getIcon())
                                     .font(.system(size: 40))
-                                
                                 Text(weather.weather[0].main)
                             }
                             .frame(width: 150, alignment: .leading)
@@ -69,9 +69,9 @@ struct WeatherView: View {
                 }
                 .padding()
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .edgesIgnoringSafeArea(.all)
             
         }
-        .edgesIgnoringSafeArea(.all)
         .preferredColorScheme(.dark)
     }
     
@@ -89,6 +89,37 @@ struct WeatherView: View {
         } else {
             return Gradient(colors: [.black, .gray])
         }
+    }
+    
+    private func getIcon() -> String {
+        // Variable used to set the weatherIcon
+        var weatherIcon = "exclamationmark.triangle.fill"
+        
+        switch weather.weather[0].main {
+        case "Clear":
+            weatherIcon = "sun.max"
+        case "Rain":
+            weatherIcon = "cloud.rain"
+        case "Drizzle":
+            weatherIcon = "cloud.drizzle"
+        case "Thunderstorm":
+            weatherIcon = "cloud.bolt.rain"
+        case "Snow":
+            weatherIcon = "cloud.snow"
+        case "Clouds":
+            weatherIcon = "cloud"
+        case "Fog":
+            weatherIcon = "cloud.fog"
+        case "Smoke":
+            weatherIcon = "smoke"
+        case "Mist":
+            weatherIcon = "humidity"
+        default:
+            weatherIcon = "exclamationmark.triangle.fill"
+        }
+        
+        // return the icon to use
+        return weatherIcon
     }
 }
 

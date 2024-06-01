@@ -16,7 +16,7 @@ struct WeatherView: View {
             LinearGradient(gradient: getGradient(),
                            startPoint: .topLeading,
                            endPoint: .bottomTrailing)
-            .edgesIgnoringSafeArea(.all)
+                .edgesIgnoringSafeArea(.all)
 
             VStack {
                 VStack(alignment: .leading, spacing: 5) {
@@ -24,6 +24,7 @@ struct WeatherView: View {
                     Text(weather.name)
                         .bold()
                         .font(.title)
+                        .padding(.top, 32)
                     // display the date and time
                     Text("Today, \(Date().formatted(.dateTime.month().day().hour().minute()))")
                         .fontWeight(.light)
@@ -38,10 +39,13 @@ struct WeatherView: View {
                                 // set the weatherIcon depending on conditions
                                 Image(systemName: getIcon())
                                     .font(.system(size: 40))
+                                    .padding(.top)
                                 Text(weather.weather[0].main)
+                                Text(weather.weather[0].description)
+                                    .italic()
+                                    .bold()
                             }
                             .frame(width: 150, alignment: .leading)
-                            
                             Spacer()
                             
                             // Display the 'real' and 'feels like' temperature

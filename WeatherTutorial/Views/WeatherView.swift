@@ -30,7 +30,16 @@ struct WeatherView: View {
                         .fontWeight(.light)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
-                    
+                
+                // Sunrise and Sunset Info
+                HStack {
+                    Image(systemName: "sun.horizon")
+                        .font(.system(size: 30))
+                    Text(weather.sys.sunRise.description)
+                        .padding(.top)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                
                     Spacer()
                     
                     VStack {

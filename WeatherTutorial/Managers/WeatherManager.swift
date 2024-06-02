@@ -46,6 +46,7 @@ struct ResponseBody: Decodable {
     var main: MainResponse
     var name: String
     var wind: WindResponse
+    var sys: SysResponse
     
     struct CoordinatesResponse: Decodable {
         var lon: Double
@@ -74,12 +75,23 @@ struct ResponseBody: Decodable {
         var speed: Double
         var deg: Double
     }
+    
+    struct SysResponse: Decodable {
+        var country: String
+        var sunrise: Double
+        var sunset: Double
+    }
 }
 
 extension ResponseBody.MainResponse {
     var feelsLike: Double {return feels_like}
     var tempMin: Double {return temp_min}
     var tempMax: Double {return temp_max}
+}
+
+extension ResponseBody.SysResponse {
+    var sunRise: Double {return sunrise}
+    var sunSet: Double {return sunset}
 }
 
 struct Secrets: Decodable {

@@ -14,6 +14,8 @@ This is a weather app project I followed a [tutorial]((https://www.youtube.com/w
 * Extensions in Swift
 * Basic UI design in Swift
 * Displaying data retrieved with an API call using SwiftUI
+* unix time format
+* SF Symbol icons
 
 ## Features/Customizations I Made 🔧
 * Hiding the API key using a JSON file then decoding it when making a API call
@@ -21,3 +23,4 @@ This is a weather app project I followed a [tutorial]((https://www.youtube.com/w
 * Different background colors depending on the time of day
 * Weather Icon displayed dependent on weather data from API
 * Laying out additional weather information returned from the API call
+* Function to convert unix time to 24hr format (Needed to display sunrise/sunset time infomation from the API)

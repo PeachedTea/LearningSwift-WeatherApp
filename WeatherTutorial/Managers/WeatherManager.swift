@@ -44,9 +44,10 @@ struct ResponseBody: Decodable {
     var coord: CoordinatesResponse
     var weather: [WeatherResponse]
     var main: MainResponse
-    var name: String
     var wind: WindResponse
     var sys: SysResponse
+    var name: String
+    var timezone: Int
     
     struct CoordinatesResponse: Decodable {
         var lon: Double

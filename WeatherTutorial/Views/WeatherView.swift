@@ -35,7 +35,7 @@ struct WeatherView: View {
                 HStack {
                     Image(systemName: "sun.horizon")
                         .font(.system(size: 30))
-                    Text(weather.sys.sunRise.description)
+                    Text("\(getTimeFromUnix(unix: weather.sys.sunRise)) - \(getTimeFromUnix(unix: weather.sys.sunSet))")
                         .padding(.top)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -133,6 +133,18 @@ struct WeatherView: View {
         
         // return the icon to use
         return weatherIcon
+    }
+    
+    // function to convert unix time to 24hr time
+    private func getTimeFromUnix(unix: Double) -> String {
+        let time = NSDate(timeIntervalSince1970: unix)
+        
+        let dateFormat = DateFormatter()
+        let timezone = weather.timezone
+        dateFormat.timeZone = TimeZone(secondsFromGMT: timezone)
+        dateFormat.dateFormat = "HH:mm"
+        let formattedTime = dateFormat.string(from: time as Date)
+        return formattedTime
     }
 }
 

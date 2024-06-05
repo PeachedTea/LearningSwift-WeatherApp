@@ -44,6 +44,7 @@ struct ContentView: View {
         .background(.black)
         .preferredColorScheme(.dark)
         .padding()
+        .ignoresSafeArea(edges: .all)
     }
 }
 

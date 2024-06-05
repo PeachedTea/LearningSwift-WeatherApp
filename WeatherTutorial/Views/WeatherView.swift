@@ -26,9 +26,9 @@ struct WeatherView: View {
             }
             .padding()
             .frame(maxWidth: .infinity, alignment: .leading)
-            .edgesIgnoringSafeArea(.all)
         }
         .preferredColorScheme(.dark)
+        .ignoresSafeArea(.all)
     }
 }
 
@@ -98,9 +98,8 @@ private func getGradient() -> Gradient {
 struct BackgroundView: View {
     var body: some View {
         LinearGradient(gradient: getGradient(),
-                       startPoint: .topLeading,
-                       endPoint: .bottomTrailing)
-        .edgesIgnoringSafeArea(.all)
+                       startPoint: .top,
+                       endPoint: .bottom)
     }
 }
 
